@@ -48,6 +48,6 @@ final class UploadCommandHandler extends Handler
             $source = Psr7\try_fopen($source, 'r+');
         }
 
-        return Psr7\stream_for($source);
+        return Psr7\Utils::streamFor($source);
     }
 }
